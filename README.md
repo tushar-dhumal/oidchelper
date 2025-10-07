@@ -1,11 +1,3 @@
-Here's a complete `README.md` file for your GitHub repository, covering:
-
-* App description
-* Docker image creation and usage
-* Steps to run the container
-* How to use the form to get tokens
-
----
 
 ````markdown
 # OIDC Token Helper
