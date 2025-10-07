@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OIDC Connect helper</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <h1>OIDC Authentication </h1>
+  
+  <div class="config-form">
+    <h2>OIDC Configuration</h2>
+    <div class="form-group">
+      <label for="client_id">Client ID:</label>
+      <input type="text" id="client_id" placeholder="Enter your client ID" required>
+    </div>
+
+    <div class="form-group">
+      <label for="client_secret">Client Secret (optional):</label>
+      <input type="password" id="client_secret" placeholder="Enter your client secret (if needed)">
+    </div>
+    
+    <div class="form-group">
+      <label for="discovery_endpoint">Discovery Endpoint:</label>
+      <input type="text" id="discovery_endpoint" placeholder="https://your-oidc-provider.com/.well-known/openid-configuration" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="scope">Scope:</label>
+      <input type="text" id="scope" placeholder="openid profile email" value="openid profile email">
+    </div>
+    
+    <div class="form-group">
+      <label for="state">State (optional):</label>
+      <input type="text" id="state" placeholder="Custom state parameter">
+    </div>
+  </div>
+  
+  <button onclick="login()">Login with OIDC</button>
+</body>
+</html>
