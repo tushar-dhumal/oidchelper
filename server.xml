@@ -1,0 +1,23 @@
+<server description="OIDC PKCE Static App Server">
+
+    <featureManager>
+        <feature>servlet-6.0</feature>
+        <feature>webCache-1.0</feature>
+        <feature>transportSecurity-1.0</feature>
+    </featureManager>
+
+    <httpEndpoint id="defaultHttpEndpoint"
+                  host="*"
+                  httpPort="9080"
+                  httpsPort="9443">
+        <sslOptions sslProtocol="TLSv1.2" />
+    </httpEndpoint>
+    
+    <!-- Self-signed certificate configuration -->
+    <keyStore id="defaultKeyStore" password="Liberty" />
+
+    <webApplication id="oidchelper"
+                     location="${server.config.dir}/apps/oidchelper"
+                     contextRoot="/" />
+
+</server>
