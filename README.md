@@ -99,5 +99,5 @@ CMD ["/opt/ibm/wlp/bin/server", "run", "defaultServer"]
 
 ## 📄 License
 
-MIT or your organization’s license here.
+MIT
 
